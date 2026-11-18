@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="description" content="A 1,000 sq. ft. gallery and exhibition space inside an artists' community building in Montreal, Quebec. An intimate, community-focused place to show work, gather, and connect.">
+<link rel="icon" href="data:,">
+<title>[Gallery Name] — Gallery &amp; Exhibition Space in Montreal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#ffffff; --paper:#fcfcfa; --soft:#f6f5f2; --line:#e7e4de; --line2:#d9d5cd;
+  --ink:#161513; --body:#3d3a36; --muted:#6f6a62;
+  --accent:#a8431f; --accent-dark:#8a3515; --accent-soft:#faf0ea;
+  --gold:#b07d2b;
+  --radius:14px; --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--white);color:var(--body);font-family:"Public Sans",system-ui,-apple-system,Segoe UI,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:"Newsreader",Georgia,serif;color:var(--ink);font-weight:500;line-height:1.12;letter-spacing:-.01em}
+h1{font-size:clamp(2.4rem,6vw,4.2rem);margin:0 0 18px}
+h2{font-size:clamp(1.9rem,4vw,2.9rem);margin:0 0 14px}
+h3{font-size:1.45rem;margin:0 0 8px}
+p{margin:0 0 16px}
+a{color:var(--accent)}
+img{max-width:100%;display:block}
+button,[role="button"],select,summary,input,textarea{font:inherit}
+button,[role="button"],select,summary,input:not([type="checkbox"]){min-height:44px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.ph{color:var(--muted);background:var(--soft);border:1px dashed var(--line2);border-radius:6px;padding:1px 7px;font-size:.92em;overflow-wrap:anywhere}
+.label{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
+.lead{font-size:1.18rem;color:var(--body);max-width:62ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:12px 24px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:#fff;text-decoration:none;font-weight:600;font-size:.98rem;cursor:pointer}
+.btn:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.btn.ghost{background:#fff;color:var(--ink)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn.light{background:#fff;color:var(--ink);border-color:#fff}
+
+/* Header */
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.header-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.brand{text-decoration:none;color:var(--ink);line-height:1.15}
+.brand strong{font-family:"Newsreader",Georgia,serif;font-size:1.35rem;font-weight:600;display:block}
+.brand span{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+nav.main{display:flex;gap:4px;align-items:center}
+nav.main button{background:none;border:0;padding:10px 13px;min-height:44px;font-weight:500;color:var(--body);cursor:pointer;border-radius:8px;font-size:.97rem}
+nav.main button:hover{color:var(--accent)}
+nav.main button[aria-current="page"]{color:var(--ink);font-weight:700;text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--accent);text-decoration-thickness:2px}
+nav.main .cta{background:var(--ink);color:#fff;border-radius:999px;padding:10px 18px;margin-left:8px}
+nav.main .cta:hover{background:var(--accent-dark);color:#fff}
+.menu-btn{display:none;background:#fff;border:1px solid var(--line2);border-radius:10px;width:48px;height:48px;cursor:pointer;font-size:1.3rem;color:var(--ink)}
+
+/* Views */
+.view{display:none}
+.view.active{display:block;animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.view.active{animation:none}html{scroll-behavior:auto}}
+
+/* Hero */
+.hero{padding-top:56px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero-img{border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center;aspect-ratio:3/2}
+.caption{font-size:.85rem;color:var(--muted);margin-top:10px}
+.stats{display:flex;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:56px 0 0}
+.stat{flex:1 1 0;padding:24px 18px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px}
+.stat+.stat{border-left:1px solid var(--line)}
+.stat b{display:block;font-family:"Newsreader",serif;font-size:1.9rem;line-height:1.1;color:var(--ink);font-weight:600}
+.stat span{font-size:.85rem;line-height:1.5;color:var(--muted);max-width:26ch}
+
+section.band{padding:72px 0}
+section.band.soft{background:#ffffff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.page{padding:56px 0 72px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:34px;align-items:stretch}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;height:100%}
+.card img{width:100%;height:242px;object-fit:cover;object-position:center;flex:none}
+.card img.wide{height:460px}
+.card .pad{padding:22px;display:flex;flex-direction:column;flex:1}
+.card .pad>p:last-child{margin-bottom:0}
+.card .pad>p:last-child:has(.btn){margin-top:auto;padding-top:14px}
+.card .meta{font-size:.85rem;color:var(--muted);margin-bottom:6px}
+.tag{display:inline-block;align-self:flex-start;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--accent-soft);color:var(--accent-dark);padding:4px 10px;border-radius:999px;margin-bottom:10px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px;align-items:stretch}
+.step{background:#fff;border:1px solid var(--line);border-top:3px solid var(--ink);border-radius:12px;padding:20px 20px 8px;height:100%}
+.step .num{font-family:"Newsreader",serif;font-size:2rem;line-height:1.1;color:var(--accent)}
+.checklist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;align-items:stretch}
+.checklist li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;height:100%}
+.checklist b{color:var(--ink);display:block;margin-bottom:2px}
+.spec-table{width:100%;border-collapse:collapse;background:#fff}
+.spec-table th,.spec-table td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.spec-table th{width:38%;color:var(--ink);font-weight:600}
+.plan{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+blockquote{margin:0;font-family:"Newsreader",serif;font-size:clamp(1.4rem,3vw,2rem);line-height:1.35;color:var(--ink)}
+.notice{background:var(--accent-soft);border:1px solid #ecd9cf;border-radius:12px;padding:18px 20px;color:#5c2d18}
+.notice.cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.notice.cta-row .btn{flex:none}
+.btn-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn-row .btn{flex:none}
+form.inquiry{display:grid;gap:16px}
+.field label{font-weight:600;color:var(--ink);display:block;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;border:1px solid var(--line2);border-radius:10px;padding:12px 14px;background:#fff;color:var(--ink);min-height:48px}
+.field textarea{min-height:130px;resize:vertical}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.summary-box{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:18px;white-space:pre-wrap;font-size:.95rem;display:none}
+.artist-hero{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+.foot-grid{align-items:start}
+.portrait-ph{aspect-ratio:4/5;min-height:340px;background:var(--soft);border:1px dashed var(--line2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);padding:24px}
+footer.site{border-top:1px solid var(--line);background:#fff;padding:48px 0 36px;margin-top:0}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
+footer.site a{color:var(--body)}
+.small{font-size:.88rem;color:var(--muted)}
+.ref-note{border-top:1px solid var(--line);margin-top:36px;padding-top:18px}
+
+/* Tablet — keep the full nav on one line before it collapses */
+@media (max-width:1120px) and (min-width:721px){
+  nav.main{gap:0}
+  nav.main button{padding:10px 8px;font-size:.92rem}
+  nav.main .cta{padding:10px 14px;margin-left:4px}
+  .brand strong{font-size:1.2rem}
+}
+/* Tablet */
+@media (max-width:960px){
+  .hero-grid,.two,.artist-hero{grid-template-columns:1fr;gap:32px}
+  .cards{grid-template-columns:1fr 1fr}
+  .card img{height:250px}
+  .card img.wide{height:320px}
+  .steps{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+/* Phone */
+@media (max-width:720px){
+  body{font-size:16px}
+  .wrap{padding:0 18px}
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center}
+  nav.main{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;padding:12px 18px 18px;gap:2px;box-shadow:0 18px 30px rgba(0,0,0,.07)}
+  nav.main.open{display:flex}
+  nav.main button{text-align:left;width:100%;padding:13px 10px;font-size:1.05rem}
+  nav.main .cta{margin:10px 0 0;text-align:center;justify-content:center}
+  .hero{padding-top:36px}
+  section.band{padding:48px 0}
+  .cards{grid-template-columns:1fr}
+  .card img{height:236px}
+  .card img.wide{height:210px}
+  .checklist{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .stats{flex-direction:column}
+  .stat{padding:20px 18px}
+  .stat+.stat{border-left:0;border-top:1px solid var(--line)}
+  .stat span{max-width:44ch}
+  .btn-row .btn{flex:1 1 100%;width:100%}
+  .notice.cta-row .btn{width:100%}
+  .foot-grid{grid-template-columns:1fr}
+  .spec-table th{width:44%}
+  h1{font-size:2.35rem}
+}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap header-in">
+    <a class="brand" href="#home" data-nav="home"><strong>[Gallery Name]</strong><span>Montreal · Exhibition Space</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">☰</button>
+    <nav class="main" id="mainNav" aria-label="Main navigation">
+      <button data-nav="home">Home</button>
+      <button data-nav="space">The Space</button>
+      <button data-nav="amenities">Amenities</button>
+      <button data-nav="exhibitions">Exhibitions</button>
+      <button data-nav="artist">Artists</button>
+      <button data-nav="about">About</button>
+      <button class="cta" data-nav="booking">Inquire About Booking</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ 1. HOME ============ -->
+<section class="view" id="view-home" aria-labelledby="home-h">
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <p class="label">A gallery in the heart of the neighbourhood</p>
+        <h1 id="home-h">A small room, made for big work.</h1>
+        <p class="lead">Tucked inside an artists’ community building in Montreal, our gallery offers about 1,000 square feet of bright, flexible exhibition space — an intimate alternative to the city’s large commercial galleries, and a welcoming home for artists at every stage of their practice.</p>
+        <p class="btn-row" style="margin-top:24px">
+          <button class="btn" data-nav="booking">Inquire About Booking</button>
+          <button class="btn ghost" data-nav="space">See the Space</button>
+        </p>
+        <p class="small">Planning a first solo show, a group exhibition, or a community project? Start with a conversation — we would love to hear what you are working on.</p>
+      </div>
+      <div>
+        <div class="hero-img"><img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" fetchpriority="high" alt="Illustrated view of a bright white gallery with tall windows and three large abstract paintings"></div>
+        <p class="caption">Illustrated placeholder — photographs of the gallery will be added here.</p>
+      </div>
+    </div>
+    <div class="stats" role="list" aria-label="Gallery at a glance">
+      <div class="stat" role="listitem"><b>±1,000</b><span>square feet of exhibition space</span></div>
+      <div class="stat" role="listitem"><b>1</b><span>artists’ community building, shared with working studios</span></div>
+      <div class="stat" role="listitem"><b>Montreal</b><span>Quebec, Canada — a bilingual arts city</span></div>
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <p class="label">On now &amp; coming up</p>
+      <h2>Exhibitions</h2>
+      <p class="lead">Our programme centres local and emerging artists, with room for experimentation. Titles, dates, and artists are added as each exhibition is confirmed.</p>
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" loading="lazy" decoding="async" alt="Abstract painting in ochre, rust red, and charcoal — placeholder artwork image">
+          <div class="pad"><span class="tag">Current / Most Recent</span>
+            <h3>[Exhibition Title]</h3>
+            <p class="meta">[Artist name(s)] · [Dates to be confirmed]</p>
+            <p>A short description of the exhibition will appear here, written with the artist once the show is announced.</p>
+            <p><button class="btn ghost" data-nav="exhibitions">View Exhibition</button></p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1515405295579-ba7b45403062?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" loading="lazy" decoding="async" alt="Geometric abstract artwork in sage, blue, and cream — placeholder artwork image">
+          <div class="pad"><span class="tag">Upcoming</span>
+            <h3>[Exhibition Title]</h3>
+            <p class="meta">[Artist name(s)] · [Dates to be confirmed]</p>
+            <p>Details of the next exhibition will be posted here as soon as they are finalized with the artist.</p>
+            <p><button class="btn ghost" data-nav="exhibitions">View Exhibition</button></p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" loading="lazy" decoding="async" alt="Illustration of an artist working in a bright studio — placeholder image">
+          <div class="pad"><span class="tag">Your Show Here</span>
+            <h3>Book the gallery</h3>
+            <p class="meta">Solo shows · Group shows · Community projects</p>
+            <p>The calendar opens to artists and collectives from across Montreal and beyond. Tell us about your project.</p>
+            <p><button class="btn ghost" data-nav="booking">Start an Inquiry</button></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band soft">
+    <div class="wrap two">
+      <div>
+        <p class="label">Why artists choose a smaller room</p>
+        <h2>Intimate by design</h2>
+        <p>Large commercial galleries can feel distant. Here, visitors stand close to the work, openings feel like gatherings of neighbours, and artists are part of a building full of other makers — studios down the hall, conversation in the corridor, and a community that shows up for one another.</p>
+        <p><button class="btn ghost" data-nav="about">More About the Gallery</button></p>
+      </div>
+      <blockquote>“A room where the work — and the people who made it — come first.”<footer class="small" style="margin-top:12px">— Our approach, in one line. Artist testimonials will be added here with permission.</footer></blockquote>
+    </div>
+  </section>
+</section>
+</main>
+
+<!-- ============ 2. THE SPACE ============ -->
+<section class="view" id="view-space" aria-labelledby="space-h">
+  <div class="wrap page">
+    <p class="label">The Space</p>
+    <h1 id="space-h">1,000 square feet, ready for your work.</h1>
+    <p class="lead">One open, flexible room inside an artists’ community building in Montreal. The layout below is a simple guide — exact measurements, wall runs, and ceiling details will be confirmed for each booking.</p>
+
+    <div class="two" style="margin-top:36px">
+      <div class="plan" role="img" aria-label="Simplified floor plan: a rectangular gallery of about 1,000 square feet with an entry, main exhibition walls, and a flexible centre area">
+        <svg viewBox="0 0 520 360" width="100%" aria-hidden="true">
+          <rect x="30" y="30" width="460" height="300" fill="#fcfcfa" stroke="#161513" stroke-width="3"/>
+          <rect x="30" y="30" width="460" height="46" fill="#faf0ea"/>
+          <text x="260" y="59" text-anchor="middle" font-size="14" fill="#8a3515" font-weight="700">MAIN EXHIBITION WALL</text>
+          <rect x="30" y="76" width="52" height="254" fill="#f6f5f2"/>
+          <text x="56" y="210" text-anchor="middle" font-size="12" fill="#6f6a62" transform="rotate(-90 56 210)">SIDE WALL</text>
+          <rect x="438" y="76" width="52" height="254" fill="#f6f5f2"/>
+          <text x="464" y="210" text-anchor="middle" font-size="12" fill="#6f6a62" transform="rotate(90 464 210)">SIDE WALL</text>
+          <rect x="150" y="140" width="220" height="110" fill="#ffffff" stroke="#d9d5cd" stroke-dasharray="6 5"/>
+          <text x="260" y="190" text-anchor="middle" font-size="13" fill="#3d3a36">Flexible centre area</text>
+          <text x="260" y="212" text-anchor="middle" font-size="12" fill="#6f6a62">plinths · tables · seating</text>
+          <rect x="215" y="330" width="90" height="10" fill="#a8431f"/>
+          <text x="260" y="322" text-anchor="middle" font-size="12" fill="#8a3515" font-weight="700">ENTRY</text>
+        </svg>
+        <p class="caption">Simplified plan, not to scale. A measured floor plan will be supplied to booked artists.</p>
+      </div>
+      <div>
+        <table class="spec-table">
+          <caption class="small" style="text-align:left;padding-bottom:10px">Practical details — items marked as placeholders will be completed by the gallery.</caption>
+          <tr><th scope="row">Total area</th><td>About 1,000 sq. ft.</td></tr>
+          <tr><th scope="row">Setting</th><td>Inside an artists’ community building, Montreal, Quebec</td></tr>
+          <tr><th scope="row">Address</th><td><span class="ph">[Street address to be added]</span></td></tr>
+          <tr><th scope="row">Ceiling height</th><td><span class="ph">[To be added]</span></td></tr>
+          <tr><th scope="row">Walls &amp; hanging</th><td><span class="ph">[Hanging system details to be added]</span></td></tr>
+          <tr><th scope="row">Lighting</th><td><span class="ph">[Lighting details to be added]</span></td></tr>
+          <tr><th scope="row">Access for install</th><td><span class="ph">[Loading / access details to be added]</span></td></tr>
+          <tr><th scope="row">Accessibility</th><td><span class="ph">[Step-free access details to be added]</span></td></tr>
+          <tr><th scope="row">Capacity</th><td><span class="ph">[Capacity to be added]</span></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" loading="lazy" decoding="async" alt="Illustrated gallery interior — photo placeholder"><div class="pad"><h3>The room</h3><p>Photographs of the gallery will replace this illustration once they are provided.</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" loading="lazy" decoding="async" alt="Abstract artwork — photo placeholder"><div class="pad"><h3>The walls</h3><p>Long, clean runs of wall for painting, photography, textile work, and installation.</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" loading="lazy" decoding="async" alt="Illustrated artist studio — photo placeholder"><div class="pad"><h3>The building</h3><p>Studios and fellow artists just down the hall — your exhibition joins a working creative community.</p></div></div>
+    </div>
+    <p style="margin-top:32px"><button class="btn" data-nav="booking">Inquire About Booking This Space</button></p>
+  </div>
+</section>
+
+<!-- ============ 3. AMENITIES ============ -->
+<section class="view" id="view-amenities" aria-labelledby="amen-h">
+  <div class="wrap page">
+    <p class="label">Amenities</p>
+    <h1 id="amen-h">What comes with a booking</h1>
+    <p class="lead">Every booking is arranged directly with the gallery so the details fit your exhibition. The list below is the gallery’s amenities template — each item will be confirmed in writing before your show, and any detail not yet listed here is marked clearly.</p>
+    <div class="notice" style="margin:26px 0"><strong>Please note:</strong> Rental fees, deposits, and included services have not been published yet. Pricing and the final list of inclusions are provided in response to each inquiry — nothing is charged or promised through this page.</div>
+    <ul class="checklist">
+      <li><b>Exhibition space</b>About 1,000 sq. ft. of gallery space for the agreed exhibition period.</li>
+      <li><b>Installation period</b><span class="ph">[Install / de-install days to be confirmed]</span></li>
+      <li><b>Hanging &amp; display</b><span class="ph">[Hanging system, plinths, and display furniture to be confirmed]</span></li>
+      <li><b>Lighting</b><span class="ph">[Gallery lighting details to be confirmed]</span></li>
+      <li><b>Opening reception</b><span class="ph">[Reception arrangements to be confirmed]</span></li>
+      <li><b>Promotion</b><span class="ph">[Listing, signage, and promotion details to be confirmed]</span></li>
+      <li><b>Gallery sitting</b><span class="ph">[Staffing / gallery-sitting arrangements to be confirmed]</span></li>
+      <li><b>Facilities</b><span class="ph">[Washrooms, kitchen, and shared facilities to be confirmed]</span></li>
+      <li><b>Internet</b><span class="ph">[Wi-Fi availability to be confirmed]</span></li>
+      <li><b>Accessibility</b><span class="ph">[Accessibility features to be confirmed]</span></li>
+    </ul>
+    <h2 style="margin-top:48px">Good to know</h2>
+    <div class="steps">
+      <div class="step"><span class="num">01</span><h3>Insurance &amp; care of work</h3><p>Responsibility for artwork insurance and handling is agreed with each artist in advance. <span class="ph">[Policy details to be added]</span></p></div>
+      <div class="step"><span class="num">02</span><h3>Sales</h3><p>If work is offered for sale, commission and payment arrangements are confirmed in writing before the opening. <span class="ph">[Terms to be added]</span></p></div>
+      <div class="step"><span class="num">03</span><h3>Hours</h3><p>Public opening hours for each exhibition are set with the artist and posted on the exhibition page. <span class="ph">[Regular hours to be added]</span></p></div>
+    </div>
+    <p style="margin-top:32px"><button class="btn" data-nav="booking">Ask About Availability</button></p>
+  </div>
+</section>
+
+<!-- ============ 4. EXHIBITIONS ============ -->
+<section class="view" id="view-exhibitions" aria-labelledby="exh-h">
+  <div class="wrap page">
+    <p class="label">Exhibitions</p>
+    <h1 id="exh-h">Current, upcoming &amp; past shows</h1>
+    <p class="lead">Each exhibition gets its own page built from this template — title, artist, dates, a curatorial note, and selected works — so the archive grows easily as new shows are added.</p>
+
+    <article class="card" style="margin-top:36px">
+      <img class="wide" src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" alt="Abstract painting in ochre, rust, and charcoal — placeholder artwork for the featured exhibition">
+      <div class="pad" style="padding:28px">
+        <span class="tag">Featured — Current / Most Recent</span>
+        <h2>[Exhibition Title]</h2>
+        <p class="meta">[Artist name(s)] · [Opening date] – [Closing date] · [Opening reception details]</p>
+        <p>A curatorial introduction will be published here: what brings these works together, why this artist, and why now. Until the next show is announced, this space introduces the gallery’s most recent exhibition.</p>
+        <p><button class="btn ghost" data-nav="artist">Meet the Artist</button></p>
+      </div>
+    </article>
+
+    <h2 style="margin-top:52px">Archive</h2>
+    <p class="small">Past exhibitions are added below in the same format — newest first.</p>
+    <div class="cards" style="margin-top:20px">
+      <article class="card"><img src="https://images.unsplash.com/photo-1554907984-15263bfd63bd?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" loading="lazy" decoding="async" alt="Geometric abstract artwork — placeholder image"><div class="pad"><h3>[Past Exhibition Title]</h3><p class="meta">[Artist name(s)] · [Year]</p><p>Short summary of the exhibition to be added.</p></div></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" loading="lazy" decoding="async" alt="Abstract painting — placeholder image"><div class="pad"><h3>[Past Exhibition Title]</h3><p class="meta">[Artist name(s)] · [Year]</p><p>Short summary of the exhibition to be added.</p></div></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" loading="lazy" decoding="async" alt="Artist studio illustration — placeholder image"><div class="pad"><h3>[Past Exhibition Title]</h3><p class="meta">[Artist name(s)] · [Year]</p><p>Short summary of the exhibition to be added.</p></div></article>
+    </div>
+    <div class="notice cta-row" style="margin-top:36px"><span><strong>Showing with us?</strong> Every booked exhibition is listed here and in the archive, with a dedicated artist page — one of the simplest ways we help your work be found.</span> <button class="btn" data-nav="booking">Inquire About Booking</button></div>
+  </div>
+</section>
+
+<!-- ============ 5. ARTIST BIO TEMPLATE ============ -->
+<section class="view" id="view-artist" aria-labelledby="artist-h">
+  <div class="wrap page">
+    <p class="label">Artist Profile — Reusable Template</p>
+    <div class="artist-hero">
+      <div>
+        <div class="portrait-ph">[Artist portrait<br>to be added]</div>
+        <p class="caption">Portrait supplied by the artist.</p>
+        <div class="card" style="margin-top:18px"><div class="pad">
+          <h3 style="font-size:1.15rem">At a glance</h3>
+          <p class="small" style="margin:0">Based in: <span class="ph">[City / neighbourhood]</span><br>
+          Practice: <span class="ph">[Painting / photography / …]</span><br>
+          Website: <span class="ph">[Artist website]</span><br>
+          Social: <span class="ph">[Artist handle]</span></p>
+        </div></div>
+      </div>
+      <div>
+        <h1 id="artist-h">[Artist Name]</h1>
+        <p class="lead">[A one-sentence introduction to the artist and their work — for example, the medium they work in and the questions their practice returns to.]</p>
+        <h2 style="font-size:1.6rem;margin-top:28px">Biography</h2>
+        <p>[Artist biography to be added — background, training, exhibitions, and collections, written in the third person in about 150–250 words. Supplied or approved by the artist before publication.]</p>
+        <h2 style="font-size:1.6rem;margin-top:28px">Artist statement</h2>
+        <p>[Artist statement to be added — in the artist’s own words: what they make, how they make it, and what they hope a visitor takes away from the work.]</p>
+        <h2 style="font-size:1.6rem;margin-top:28px">In this exhibition</h2>
+        <p>[A short note connecting the artist to their exhibition at the gallery, with dates and a link back to the exhibition listing.]</p>
+        <p class="btn-row" style="margin-top:20px"><button class="btn ghost" data-nav="exhibitions">See the Exhibition</button><button class="btn" data-nav="booking">Book a Show Like This</button></p>
+      </div>
+    </div>
+    <h2 style="margin-top:52px">Selected works</h2>
+    <div class="cards" style="margin-top:20px">
+      <div class="card"><img src="https://images.unsplash.com/photo-1531243269054-5ebf6f34081e?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" loading="lazy" decoding="async" alt="Selected work placeholder — abstract painting"><div class="pad"><h3>[Work Title]</h3><p class="meta">[Year] · [Medium] · [Dimensions]</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1580136579312-94651dfd596d?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" loading="lazy" decoding="async" alt="Selected work placeholder — geometric abstract artwork"><div class="pad"><h3>[Work Title]</h3><p class="meta">[Year] · [Medium] · [Dimensions]</p></div></div>
+      <div class="card"><img src="https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" loading="lazy" decoding="async" alt="Selected work placeholder — gallery view"><div class="pad"><h3>[Work Title]</h3><p class="meta">[Year] · [Medium] · [Dimensions]</p></div></div>
+    </div>
+    <p class="small" style="margin-top:22px">This page is a template: duplicate it for each exhibiting artist, replace the bracketed text, and link it from the exhibition listing.</p>
+  </div>
+</section>
+
+<!-- ============ 6. BOOKING & CONTACT ============ -->
+<section class="view" id="view-booking" aria-labelledby="book-h">
+  <div class="wrap page">
+    <p class="label">Booking &amp; Contact</p>
+    <h1 id="book-h">Inquire about booking</h1>
+    <p class="lead">Booking begins with a conversation. Tell us about your work and the show you have in mind, and the gallery will reply with availability, pricing, and next steps.</p>
+
+    <div class="steps">
+      <div class="step"><span class="num">01</span><h3>Send an inquiry</h3><p>Use the form below, or contact the gallery directly using the details on this page.</p></div>
+      <div class="step"><span class="num">02</span><h3>Visit &amp; discuss</h3><p>We arrange a visit so you can see the room, talk through dates, installation, and what is included.</p></div>
+      <div class="step"><span class="num">03</span><h3>Confirm in writing</h3><p>Dates, fees, and responsibilities are confirmed in a simple written agreement before you install.</p></div>
+    </div>
+
+    <div class="two" style="margin-top:48px">
+      <div>
+        <h2 style="font-size:1.7rem">Contact details</h2>
+        <table class="spec-table">
+          <tr><th scope="row">Gallery</th><td>[Gallery Name]</td></tr>
+          <tr><th scope="row">Address</th><td><span class="ph">[Street address, Montreal, QC, postal code]</span></td></tr>
+          <tr><th scope="row">Email</th><td><span class="ph">[gallery email address]</span></td></tr>
+          <tr><th scope="row">Phone</th><td><span class="ph">[phone number]</span></td></tr>
+          <tr><th scope="row">Hours</th><td><span class="ph">[Visiting hours / by appointment]</span></td></tr>
+          <tr><th scope="row">Getting here</th><td><span class="ph">[Nearest métro / bus / parking details]</span></td></tr>
+        </table>
+        <p class="small" style="margin-top:14px">Montreal is a bilingual city — inquiries are welcome in English or French, and replies will be in the language of your message where possible.</p>
+      </div>
+      <div>
+        <h2 style="font-size:1.7rem">Inquiry form</h2>
+        <form class="inquiry" id="inquiryForm">
+          <div class="form-grid">
+            <div class="field"><label for="f-name">Your name *</label><input id="f-name" required autocomplete="name" placeholder="Full name"></div>
+            <div class="field"><label for="f-email">Email *</label><input id="f-email" type="email" required autocomplete="email" placeholder="you@example.ca"></div>
+          </div>
+          <div class="form-grid">
+            <div class="field"><label for="f-type">Type of booking</label>
+              <select id="f-type"><option>Solo exhibition</option><option>Group exhibition</option><option>Community / collective project</option><option>Other event</option></select></div>
+            <div class="field"><label for="f-dates">Preferred dates</label><input id="f-dates" placeholder="e.g. Spring, or specific weeks"></div>
+          </div>
+          <div class="field"><label for="f-works">About your work *</label><textarea id="f-works" required placeholder="Medium, number and size of works, and a link to your portfolio or website if you have one."></textarea></div>
+          <div class="field"><label for="f-notes">Anything else?</label><textarea id="f-notes" style="min-height:80px" placeholder="Opening reception plans, accessibility needs, questions about the space…"></textarea></div>
+          <p><button class="btn" type="submit">Prepare My Inquiry</button></p>
+          <p class="small">This prepares a ready-to-send summary you can copy or download and email to the gallery — nothing is sent automatically from this page.</p>
+          <div class="summary-box" id="summaryBox" tabindex="-1"></div>
+          <p id="summaryActions" style="display:none;gap:10px;flex-wrap:wrap">
+            <button class="btn ghost" type="button" id="copyBtn">Copy Inquiry</button>
+            <button class="btn ghost" type="button" id="dlBtn">Download as Text</button>
+            <span class="small" id="copyMsg" role="status"></span>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. ABOUT ============ -->
+<section class="view" id="view-about" aria-labelledby="about-h">
+  <div class="wrap page">
+    <p class="label">About</p>
+    <h1 id="about-h">A gallery rooted in its building — and its neighbourhood.</h1>
+    <div class="two" style="margin-top:28px">
+      <div>
+        <p class="lead">Our gallery is the public face of an artists’ community building in Montreal: a place where studios, workshops, and working artists share one address, and where the exhibition space opens that life to the wider city.</p>
+        <p>At about 1,000 square feet, the gallery is deliberately small. That scale is the point. Exhibitions here are close-up and unhurried; openings are conversations rather than crowds; and artists — especially those mounting a first or second show — get a professional room without the pressure and distance of a large commercial gallery.</p>
+        <p>We welcome painters, photographers, textile artists, sculptors, printmakers, and interdisciplinary artists, as well as collectives and community groups with a story to tell on a wall.</p>
+      </div>
+      <div>
+        <div class="hero-img"><img src="https://images.unsplash.com/photo-1452802447250-470a36ac82bc?q=80&w=1200&auto=format&fit=crop" width="1600" height="1067" loading="lazy" decoding="async" alt="Illustration of an artist at work in a bright studio in a community arts building"></div>
+        <p class="caption">Illustrated placeholder — a photograph of the building and its studios will be added here.</p>
+      </div>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="pad"><h3>Community first</h3><p>The gallery exists for the artists in the building and the neighbours around it. Programming favours local work and genuine connection over spectacle.</p></div></div>
+      <div class="card"><div class="pad"><h3>Artist-run spirit</h3><p>Decisions are made by people who make work themselves. Artists keep a strong voice in how their exhibition looks, reads, and opens.</p></div></div>
+      <div class="card"><div class="pad"><h3>Montreal, in both languages</h3><p>We work in a bilingual city and a bilingual building. Exhibitions and events reflect the mix of cultures that makes Montreal’s art scene what it is.</p></div></div>
+    </div>
+    <h2 style="margin-top:52px">The building</h2>
+    <p style="max-width:70ch">The artists’ community building brings together working studios and shared facilities under one roof. <span class="ph">[Building name, history, and number of studios to be added]</span> Exhibiting here means joining that daily life for the run of your show — meeting the artists down the hall, and welcoming their visitors as your own.</p>
+    <p class="btn-row" style="margin-top:26px"><button class="btn" data-nav="booking">Inquire About Booking</button><button class="btn ghost" data-nav="space">Explore the Space</button></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="serif" style="font-size:1.3rem;color:var(--ink);margin-bottom:6px">[Gallery Name]</p>
+        <p class="small">A 1,000 sq. ft. gallery and exhibition space inside an artists’ community building in Montreal, Quebec, Canada.</p>
+        <p class="small"><span class="ph">[Street address]</span> · <span class="ph">[email]</span> · <span class="ph">[phone]</span></p>
+      </div>
+      <div>
+        <p><strong style="color:var(--ink)">Visit</strong></p>
+        <p class="small">
+          <button data-nav="space" class="footlink">The Space</button><br>
+          <button data-nav="amenities" class="footlink">Amenities</button><br>
+          <button data-nav="exhibitions" class="footlink">Exhibitions</button><br>
+          <button data-nav="artist" class="footlink">Artists</button>
+        </p>
+      </div>
+      <div>
+        <p><strong style="color:var(--ink)">Exhibit</strong></p>
+        <p class="small">
+          <button data-nav="booking" class="footlink">Inquire About Booking</button><br>
+          <button data-nav="about" class="footlink">About the Gallery</button>
+        </p>
+        <p class="small">Hours: <span class="ph">[to be added]</span></p>
+      </div>
+    </div>
+    <div class="ref-note small">
+      <p>Design inspiration was drawn from the exhibition presentation of the PHI Foundation for Contemporary Art, Centre Clark, and The Power Plant Contemporary Art Gallery. This is an original design; no text, branding, or images were copied from those organizations.</p>
+      <p>© <span id="yr"></span> [Gallery Name], Montreal, QC. All artwork images are placeholders until photographs are provided by the gallery and its artists.</p>
+    </div>
+  </div>
+</footer>
+<style>.footlink{background:none;border:0;padding:6px 0;min-height:36px;color:var(--body);cursor:pointer;font:inherit;text-align:left}.footlink:hover{color:var(--accent);text-decoration:underline}</style>
+
+<script>
+(function(){
+  var views=['home','space','amenities','exhibitions','artist','booking','about'];
+  var nav=document.getElementById('mainNav'), menuBtn=document.getElementById('menuBtn');
+  function show(name){
+    if(views.indexOf(name)===-1) name='home';
+    views.forEach(function(v){document.getElementById('view-'+v).classList.toggle('active',v===name);});
+    document.querySelectorAll('[data-nav]').forEach(function(b){
+      if(b.closest('nav')){ b.setAttribute('aria-current', b.getAttribute('data-nav')===name ? 'page':'false'); if(b.getAttribute('data-nav')!==name) b.removeAttribute('aria-current'); }
+    });
+    nav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); menuBtn.textContent='☰';
+    window.scrollTo({top:0,behavior:'smooth'});
+    var h=document.querySelector('#view-'+name+' h1'); if(h){h.setAttribute('tabindex','-1');}
+    document.title = name==='home' ? '[Gallery Name] — Gallery & Exhibition Space in Montreal' : name.charAt(0).toUpperCase()+name.slice(1)+' — [Gallery Name], Montreal';
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('[data-nav]'); if(!t) return;
+    var name=t.getAttribute('data-nav'); location.hash=name; show(name);
+  });
+  menuBtn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded',open); menuBtn.textContent=open?'✕':'☰'; menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');
+  });
+  window.addEventListener('hashchange',function(){show(location.hash.replace('#','')||'home');});
+  show(location.hash.replace('#','')||'home');
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // Inquiry form -> copyable / downloadable summary (nothing is sent automatically)
+  var form=document.getElementById('inquiryForm'), lastText='';
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var v=function(id){return document.getElementById(id).value.trim();};
+    lastText='GALLERY BOOKING INQUIRY\n------------------------\nName: '+v('f-name')+'\nEmail: '+v('f-email')+'\nType of booking: '+v('f-type')+'\nPreferred dates: '+(v('f-dates')||'Flexible / to discuss')+'\n\nAbout the work:\n'+v('f-works')+'\n\nAnything else:\n'+(v('f-notes')||'—');
+    var box=document.getElementById('summaryBox'); box.textContent=lastText; box.style.display='block';
+    document.getElementById('summaryActions').style.display='flex'; box.focus();
+  });
+  document.getElementById('copyBtn').addEventListener('click',function(){
+    var msg=document.getElementById('copyMsg');
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(lastText).then(function(){msg.textContent='Copied — paste it into an email to the gallery.';},function(){msg.textContent='Copy failed — select the text above instead.';});}
+  });
+  document.getElementById('dlBtn').addEventListener('click',function(){
+    var blob=new Blob([lastText],{type:'text/plain'}); var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download='gallery-booking-inquiry.txt'; a.click(); setTimeout(function(){URL.revokeObjectURL(a.href);},2000);
+  });
+})();
+</script>
+</body>
+</html>
